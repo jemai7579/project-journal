@@ -1,0 +1,180 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body */
+  head {
+      display: none;
+  }
+  
+  body {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      color: black;
+  }
+  
+  h1, h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: black;
+  }
+  
+  p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1rem;
+      font-weight: 100;
+      color: black;
+  }
+  
+  /* First grid container */
+  .container {
+      display: grid;
+      grid-template-columns: 50px 50px;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 10px;
+      grid: 
+          "e1 e1 e1 e2 e3 e4" 1fr 
+          "e5 e6 e7 e8 e9 e10" 1fr 
+          / 50px;
+  }
+  
+  .items {
+      padding: 1rem;
+      font-size: 20px;
+  }
+  
+  .items button {
+      border: crimson solid 1px;
+      border-radius: 10px;
+      color: crimson;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 700;
+  }
+  
+  .items button:hover {
+      background-color: crimson;
+      color: white;
+  }
+  
+  .items:nth-child(1) { grid-area: e1; }
+  .items:nth-child(2) { grid-area: e2; }
+  .items:nth-child(3) { grid-area: e3; }
+  .items:nth-child(4) { grid-area: e4; }
+  .items:nth-child(5) { grid-area: e5; }
+  .items:nth-child(6) { grid-area: e6; }
+  .items:nth-child(7) { grid-area: e7; }
+  .items:nth-child(8) { grid-area: e8; }
+  .items:nth-child(9) { grid-area: e9; }
+  .items:nth-child(10) { grid-area: e10; }
+  
+  /* Second grid container */
+  .vp-container {
+      display: grid;
+      gap: 5px;
+      grid:
+          "a1 a2 a3 a4" 100px
+          "a1 a5 a5 a4" 50px
+          "a6 a7 a7 a4" 40px
+          "a6 a7 a7 a8" 10px
+          "a9 . . a8" 40px
+          "a9 . . a10" 50px
+          "a11 . . a10" 40px
+          "a11 . . a12" 50px
+          "a11 a13 a14 a12" 100px
+          "a11 a15 a16 a12" 50px
+          "a11 a17 a17 a12" 50px
+          / 1fr 100px 1fr 1fr;
+  }
+  
+  .item {
+      padding: 1rem;
+      font-size: 20px;
+  }
+  
+  .item:nth-child(1) { grid-area: a1; }
+  .item:nth-child(2) { grid-area: a2; }
+  .item:nth-child(3) { grid-area: a3; }
+  .item:nth-child(4) { grid-area: a4; }
+  .item:nth-child(5) { grid-area: a5; }
+  .item:nth-child(6) { grid-area: a6; }
+  .item:nth-child(7) { grid-area: a7; }
+  .item:nth-child(8) { grid-area: a8; }
+  .item:nth-child(9) { grid-area: a9; }
+  .item:nth-child(10) { grid-area: a10; }
+  .item:nth-child(11) { grid-area: a11; }
+  .item:nth-child(12) { grid-area: a12; }
+  .item:nth-child(13) { grid-area: a13; }
+  .item:nth-child(14) { grid-area: a14; }
+  .item:nth-child(15) { grid-area: a15; }
+  
+  /* Third grid container (second vp-container) */
+  .pic-container {
+    margin-top: 20px;
+      display: grid;
+      gap: 5px;
+      grid:
+          "b1 b2 b2" 50px
+          "b1 b3 b3" 50px
+          "b1 b4 b5" 60px
+          / 1fr auto 1fr;
+        background-color: gray;
+        font-size: 2rem;
+  }
+  
+  .items-1 {
+      padding: 1rem;
+      font-size: 20px;
+  }
+  .pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:initial;
+  }
+    .pic-container img:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+    .pic-container button {
+        border: black solid 1px;
+        border-radius: 10px;
+        background-color: black;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .pic-container button:hover {
+        background-color: white;
+        color: black;
+    }
+    .pic-container input {
+        border: rgb(0, 0, 0) solid 1px;
+        border-radius: 10px;
+        background-color: grey;
+        color: black;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+    }   
+    .pic-container input:hover {
+        background-color: white;
+        color: black;
+    }
+    .pic-container input::placeholder {
+            width: 100%;
+            height: 100%;
+            color: black;
+        }
+  
+  .items-1:nth-child(1) { grid-area: b1; }
+  .items-1:nth-child(2) { grid-area: b2; }
+  .items-1:nth-child(3) { grid-area: b3; }
+  .items-1:nth-child(4) { grid-area: b4; }
+  .items-1:nth-child(5) { grid-area: b5; }
